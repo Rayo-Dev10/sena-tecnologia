@@ -1,0 +1,265 @@
+/* Variables y estilos globales */
+:root {
+  --azul-claro: #4A90E2;
+  --azul-oscuro: #2E4053;
+  --gris: #6C7A89;
+  --fondo: #F7F7F7;
+  --sombra: rgba(0, 0, 0, 0.1);
+  --resaltado: #FFD700; /* Color dorado para resaltar */
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, var(--azul-claro), var(--fondo));
+  margin: 0;
+  padding: 20px;
+  color: #222;
+  line-height: 1.6;
+}
+
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px var(--sombra);
+}
+
+/* Ficha de datos */
+.ficha {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(to right, var(--azul-claro), var(--gris));
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.ficha h1 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.ficha .datos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.ficha .datos p {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px var(--sombra);
+  color: #222;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Actividades */
+.actividad {
+  margin-bottom: 40px;
+}
+
+.actividad h2 {
+  color: var(--azul-claro);
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.actividad h3 {
+  color: var(--azul-oscuro);
+  font-size: 1.5rem;
+  margin-top: 25px;
+}
+
+.contenido-actividad {
+  background: var(--fondo);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--sombra);
+}
+
+.contenido-actividad ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+/* Infografía */
+.infografia {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.infografia h2 {
+  color: var(--azul-oscuro);
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Mosaico con Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background: var(--fondo);
+  border-radius: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Tarjetas */
+.tarjeta {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+  text-align: center;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 3px solid; /* Borde de 3px */
+}
+
+/* Colores vibrantes y alegres para los bordes */
+.tarjeta:nth-child(1) {
+  border-color: #FF5733; /* Naranja vibrante */
+}
+.tarjeta:nth-child(2) {
+  border-color: #33FF57; /* Verde lima */
+}
+.tarjeta:nth-child(3) {
+  border-color: #3357FF; /* Azul eléctrico */
+}
+.tarjeta:nth-card(4) {
+  border-color: #F3FF33; /* Amarillo brillante */
+}
+.tarjeta:nth-child(5) {
+  border-color: #FF33F3; /* Rosa neón */
+}
+.tarjeta:nth-child(6) {
+  border-color: #33FFF6; /* Turquesa */
+}
+.tarjeta:nth-child(7) {
+  border-color: #B233FF; /* Púrpura vibrante */
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+/* Imágenes dentro del mosaico */
+.foto {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Conclusión */
+.conclusion {
+  background: linear-gradient(135deg, var(--azul-claro), var(--azul-oscuro));
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 30px;
+}
+
+/* Argumentos */
+.argumentos {
+  margin-top: 30px;
+  background: var(--fondo);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+}
+
+.argumentos h3 {
+  color: var(--azul-oscuro);
+  font-size: 1.5rem;
+}
+
+.argumentos ul {
+  list-style: square; /* Viñetas cuadradas */
+  padding-left: 20px;
+}
+
+.argumentos li {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.argumentos li strong {
+  color: var(--azul-oscuro);
+  font-weight: bold;
+}
+
+.argumentos li em {
+  font-style: italic;
+  color: var(--gris);
+}
+
+.argumentos li mark {
+  background-color: var(--resaltado);
+  color: black;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+.argumentos span {
+  font-weight: bold;
+  color: var(--azul-claro);
+}
+
+.argumentos span.resaltado {
+  background-color: var(--resaltado);
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-grande {
+    grid-column: span 1;
+  }
+}
+
+/* Estilos para la nota sobre las imágenes */
+#nota-imagenes {
+  background: var(--fondo);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--sombra);
+  margin-top: 30px;
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--azul-oscuro);
+}
+
+#nota-imagenes strong {
+  color: var(--azul-claro);
+  font-weight: bold;
+}
+
+#nota-imagenes em {
+  font-style: italic;
+  color: var(--gris);
+}
