@@ -21,13 +21,54 @@ function handleCourseClick(courseId) {
     if (courseId === "coreskills") {
         window.location.href = "#";
     } else if (courseId === "estrategias") {
-        showSubOptions();
+        showSubOptions();  // 🔹 Corrección: Ahora sí carga el menú de estrategias
     } else if (courseId === "adso") {
         showADSOOptions();
     }
 }
 
-/* 🔹 Nueva función para ADSO */
+function showSubOptions() {
+    clearPage();
+    addBackButton(showMainMenu); // Volver al menú principal
+
+    const options = [
+        { name: "Prácticas", action: () => loadPracticas() },
+        { name: "Talleres", action: () => loadTalleres() }
+    ];
+
+    options.forEach(option => {
+        createButton(option.name, option.action);
+    });
+}
+
+function loadPracticas() {
+    clearPage();
+    addBackButton(showSubOptions); // Volver a elegir entre prácticas/talleres
+
+    const practicas = ["practica-1", "practica-2"];
+
+    practicas.forEach(practica => {
+        createButton(
+            practica.replace("-", " ").toUpperCase(),
+            () => window.location.href = `cursos-cortos/practicas/${practica}/index.html`
+        );
+    });
+}
+
+function loadTalleres() {
+    clearPage();
+    addBackButton(showSubOptions); // Volver a elegir entre prácticas/talleres
+
+    const talleres = ["taller-1", "taller-2"];
+
+    talleres.forEach(taller => {
+        createButton(
+            taller.replace("-", " ").toUpperCase(),
+            () => window.location.href = `cursos-cortos/talleres/${taller}/index.html`
+        );
+    });
+}
+
 function showADSOOptions() {
     clearPage();
     addBackButton(showMainMenu); // Volver al menú principal
