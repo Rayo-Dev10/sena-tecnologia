@@ -21,7 +21,7 @@ function handleCourseClick(courseId) {
     if (courseId === "coreskills") {
         window.location.href = "#";
     } else if (courseId === "estrategias") {
-        showSubOptions();  // 🔹 Corrección: Ahora sí carga el menú de estrategias
+        showSubOptions();  
     } else if (courseId === "adso") {
         showADSOOptions();
     }
@@ -32,8 +32,8 @@ function showSubOptions() {
     addBackButton(showMainMenu); // Volver al menú principal
 
     const options = [
-        { name: "Prácticas", action: () => loadPracticas() },
-        { name: "Talleres", action: () => loadTalleres() }
+        { name: "Prácticas", action: loadPracticas },
+        { name: "Talleres", action: loadTalleres }
     ];
 
     options.forEach(option => {
@@ -74,7 +74,7 @@ function showADSOOptions() {
     addBackButton(showMainMenu); // Volver al menú principal
 
     const activities = [
-        { name: "Actividad 1", action: () => showActividad1() }
+        { name: "Actividad 1", action: showActividad1 }
     ];
 
     activities.forEach(activity => {
@@ -86,7 +86,7 @@ function showActividad1() {
     clearPage();
     addBackButton(showADSOOptions); // Volver a ADSO
 
-    createButton("Evidencias", () => showEvidencias());
+    createButton("Evidencias", showEvidencias);
 }
 
 function showEvidencias() {
