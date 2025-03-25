@@ -93,7 +93,7 @@ function showEvidencias() {
     clearPage();
     addBackButton(showActividad1); // Volver a Actividad 1
 
-    createButton("1", () => window.location.href = "ADSO/Actividad_1/Evidencias/1/index.html");
+    createButton("1", () => window.location.href = "adso/actividad_1/evidencias/1/index.html");
 }
 
 /* 🔹 Funciones reutilizables */
