@@ -8,7 +8,8 @@ function showMainMenu() {
 
     const courses = [
         { name: "Estrategias para el acceso y uso de la información", id: "estrategias" },
-        { name: "CoreSkills", id: "coreskills" }
+        { name: "CoreSkills", id: "coreskills" },
+        { name: "ADSO", id: "adso" } // Nueva opción para ADSO
     ];
 
     courses.forEach(course => {
@@ -18,52 +19,40 @@ function showMainMenu() {
 
 function handleCourseClick(courseId) {
     if (courseId === "coreskills") {
-        window.location.href = "https://example.com";
+        window.location.href = "#";
     } else if (courseId === "estrategias") {
         showSubOptions();
+    } else if (courseId === "adso") {
+        showADSOOptions();
     }
 }
 
-function showSubOptions() {
+/* 🔹 Nueva función para ADSO */
+function showADSOOptions() {
     clearPage();
     addBackButton(showMainMenu); // Volver al menú principal
 
-    const options = [
-        { name: "Prácticas", action: () => loadPracticas() },
-        { name: "Talleres", action: () => loadTalleres() }
+    const activities = [
+        { name: "Actividad 1", action: () => showActividad1() }
     ];
 
-    options.forEach(option => {
-        createButton(option.name, option.action);
+    activities.forEach(activity => {
+        createButton(activity.name, activity.action);
     });
 }
 
-function loadPracticas() {
+function showActividad1() {
     clearPage();
-    addBackButton(showSubOptions); // Volver a elegir entre prácticas/talleres
+    addBackButton(showADSOOptions); // Volver a ADSO
 
-    const practicas = ["practica-1", "practica-2"]; // Se pueden agregar más dinámicamente
-
-    practicas.forEach(practica => {
-        createButton(
-            practica.replace("-", " ").toUpperCase(),
-            () => window.location.href = `cursos-cortos/practicas/${practica}/index.html`
-        );
-    });
+    createButton("Evidencias", () => showEvidencias());
 }
 
-function loadTalleres() {
+function showEvidencias() {
     clearPage();
-    addBackButton(showSubOptions); // Volver a elegir entre prácticas/talleres
+    addBackButton(showActividad1); // Volver a Actividad 1
 
-    const talleres = ["taller-1", "taller-2"]; // Se pueden agregar más dinámicamente
-
-    talleres.forEach(taller => {
-        createButton(
-            taller.replace("-", " ").toUpperCase(),
-            () => window.location.href = `cursos-cortos/talleres/${taller}/index.html`
-        );
-    });
+    createButton("1", () => window.location.href = "ADSoctividad 1/Evidencias/1/index.html");
 }
 
 /* 🔹 Funciones reutilizables */
