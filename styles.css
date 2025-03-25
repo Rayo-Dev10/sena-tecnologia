@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #001f3f, #0074D9);
+    background: linear-gradient(135deg, #2c3e50, #4b6584);
     text-align: center;
     color: #f2f2f2;
 }
@@ -11,7 +11,7 @@ body {
 /* ====== HEADER ====== */
 header {
     padding: 20px;
-    background: linear-gradient(90deg, #003366, #00509E);
+    background: linear-gradient(90deg, #34495e, #2c3e50);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -25,44 +25,66 @@ h1 {
     font-weight: bold;
     font-size: 1.2em;
     margin-top: 5px;
-    color: #AAB8C2;
+    color: #bdc3c7;
+}
+
+/* ====== HERO ====== */
+.hero {
+    width: 1200px;
+    height: 600px;
+    background: url("#") center/cover no-repeat;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* ====== CONTENEDOR PRINCIPAL ====== */
 main {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ====== CUADRÍCULA DE BOTONES ====== */
+#courses-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 20px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
 }
 
 /* ====== BOTONES ====== */
 .button {
-    display: inline-block;
-    background: linear-gradient(135deg, #00509E, #0074D9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3a506b, #5c6b73);
     color: #ffffff;
-    padding: 15px 35px;
-    margin: 20px;
-    border-radius: 30px;
-    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1em;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    height: 60px;
     cursor: pointer;
 }
 
 .button:hover {
-    background: linear-gradient(135deg, #0074D9, #00A6FB);
-    box-shadow: 5px 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #5c6b73, #3a506b);
+    box-shadow: 3px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* ====== BOTÓN DE REGRESO ====== */
 #back-button {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: linear-gradient(135deg, #AAB8C2, #66757F);
+    background: linear-gradient(135deg, #5c6b73, #34495e);
     color: white;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 8px;
     font-size: 1em;
     font-weight: bold;
     text-decoration: none;
@@ -72,11 +94,15 @@ main {
 }
 
 #back-button:hover {
-    background: linear-gradient(135deg, #66757F, #001F3F);
+    background: linear-gradient(135deg, #34495e, #5c6b73);
     box-shadow: 4px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* ====== CLASES ADICIONALES ====== */
-.hidden {
-    display: none;
+/* ====== FOOTER ====== */
+footer {
+    margin-top: 30px;
+    padding: 10px;
+    background: #2c3e50;
+    color: white;
+    font-weight: bold;
 }
